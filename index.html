@@ -5,6 +5,8 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+<link rel="stylesheet" type="text/css" href="style.css">
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
@@ -14,19 +16,28 @@
 </head>
 <body>
 
-<form id="weather-form">
-	<label>Please enter a zip code to search</label>
-	<input type="text" id="zip-code" placeholder="30324" />
-	<button type="submit" class="btn btn-primary">Get the weather</button>
-</form>
-
-<div class="col-sm-12" id="temp-info">
-	<!-- Information received back from API will go here -->
+<div class="container">
+<h1 class="text-center">Weather Widget</h1>
+	<div class="col-sm-12 content">
+		<div class="col-sm-12 header text-center">
+			<form id="weather-form">
+				<!-- <label>Please enter a zip code to search</label> -->
+				<input type="text" id="zip-code" placeholder="ZIP Code" />
+				<button type="submit" class="btn btn-primary">Get the weather</button>
+			</form>
+		</div>
+		<div class="col-sm-12 temp">
+			<div class="col-sm-6" id="temp-info">
+				<!-- Information received back from API will go here -->
+			</div>
+			<div class="col-sm-6 temp-canvas">
+				<canvas id="weather-canvas" height="500px" width="500px">
+					<!-- Put the weather widget arc in here! -->
+				</canvas>
+			</div>
+		</div>
+	</div>
 </div>
-
-<canvas id="weather-canvas" height="500px" width="500px">
-	<!-- Put the weather widget arc in here! -->
-</canvas>
 
 </body>
 </html>

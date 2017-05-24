@@ -1,0 +1,45 @@
+body{
+	background: url('http://hdfreewallpaper.net/wp-content/uploads/2015/07/1-81.jpg') no-repeat;
+	color: white;
+
+}
+
+.content{
+    margin-top: 10px;
+    height: 620px;
+    /* margin-bottom: 30px; */
+    border: 5px double #000;
+    background: rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+.temp{
+	color: white;
+}
+
+.zip-code-input{
+    display: inline-block;
+    margin-top: 20px;
+}
+
+#zip-code{
+    height: 35px;
+    border-radius: 5px;
+    color: #000;
+}
+
+.temp-feed{
+    margin-top: 20px;
+    padding-top: 40px;
+}
+.temp-canvas{
+	padding-top: 50px;
+}
+
+#temp-info{
+    margin-top: 30px;
+    height: 500px;
+    font-size: 20px;
+    /* line-height: 40px; */
+    padding-top: 30px;
+}
