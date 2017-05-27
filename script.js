@@ -119,13 +119,43 @@ $(document).ready(()=>{
   //       context.textBaseline = "top";
   //       context.fillText(temps.curr,155, 105);
 
+  		if (currentTemp >= 90){
+			context.strokeStyle = 'rgba(242,39,23,0.6)';
+		}else if (currentTemp >= 80){
+			context.strokeStyle = 'rgba(242,136,3,0.6)';
+		}else if (currentTemp >= 60){
+			context.strokeStyle = 'rgba(252,186,04,0.6)';
+		}else if (currentTemp >=50){
+			context.strokeStyle = 'rgba(87,239,249,0.6)';
+		}else if (currentTemp >32){
+			context.strokeStyle = 'rgba(12,42,249,0.6)';
+		}else{
+			context.strokeStyle = 'rgba(255,255,255,0.6)';
+		}
+
+
+
 		if (currentTemp != undefined){                             //<<<<<<<===============puts temp in circle
 			context.stroke();
 			context.font = "30px Khula";
-			context.fillStyle = 'rgba(252,186,04,0.6)';
-			context.textBaseline = "top";
+			// context.fillStyle = 'rgba(252,186,04,0.6)';
+			// context.textBaseline = "top";
+			// context.fillText(currentTemp+String.fromCharCode(176)+'F',110,90);
+			if (currentTemp >= 90){
+				context.fillStyle = 'rgba(242,39,23,0.6)';
+			}else if (currentTemp >= 80){
+				context.fillStyle = 'rgba(242,136,3,0.6)';
+			}else if (currentTemp >= 60){
+				context.fillStyle = 'rgba(252,186,04,0.6)';
+			}else if (currentTemp >=50){
+				context.fillStyle = 'rgba(87,239,249,0.6)';
+			}else if (currentTemp >32){
+				context.fillStyle = 'rgba(255,255,255,0.6)';
+			}else{
+				context.fillStyle = 'rgba(255,255,255,0.6)';
+			}
+		}	context.textBaseline = "top";
 			context.fillText(currentTemp+String.fromCharCode(176)+'F',110,90);
-		}
 
 		// Update the current Perecentage
 		currentPercent++;
