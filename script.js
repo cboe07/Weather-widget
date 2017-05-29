@@ -38,7 +38,7 @@ $(document).ready(()=>{
 			var secSetDate = new Date(secSet * 1000);
 			var riseTimeStr = secRiseDate.toLocaleTimeString();
 			var setTimeStr = secSetDate.toLocaleTimeString();
-			console.log(secRiseDate,riseTimeStr);
+			// console.log(secRiseDate,riseTimeStr);
 
 			var time = new Date().toTimeString().split(" ")[0];
 			console.log(time);
@@ -66,6 +66,12 @@ $(document).ready(()=>{
             newHTML += '<br>'
             newHTML += '<div>Cloudiness:  ' + temps.cloud + '%</div>';
 
+   //          html += '<p id="wind-info">Winds: '+cards+' at '+windSpeed+' mph</p>'
+			// html += '<div id="compass"><p id="N">N</p><p id="E">E</p><p id="S">S</p><p id="W">W</p></div>'
+			// html += '<img id="wind-arrow" src="windarrow.png">'
+
+
+
 			$('#temp-info').html(newHTML);
 			currentPercent = 0;
 			animateCircle(0,currTemp);
@@ -81,6 +87,62 @@ $(document).ready(()=>{
 				context.fillText(riseTimeStr,10,90);
 			}
 			sunRiseSet();
+
+			
+
+
+			// function cardinalDirection(deg){
+			// 	var direction;
+			// 	if((deg<11.25)||(deg>348.75)){
+			// 		direction = 'N';
+			// 	}else if(deg<33.75){
+			// 		direction = 'NNE';
+			// 	}else if(deg<56.25){
+			// 		direction = 'NE';
+			// 	}else if(deg<78.75){
+			// 		direction = 'ENE';
+			// 	}else if(deg<101.25){
+			// 		direction = 'E';
+			// 	}else if(deg<123.75){
+			// 		direction = 'ESE';
+			// 	}else if(deg<146.25){
+			// 		direction = 'SE';
+			// 	}else if(deg<168.75){
+			// 		direction = 'SSE';
+			// 	}else if(deg<191.25){
+			// 		direction = 'S';
+			// 	}else if(deg<213.75){
+			// 		direction = 'SSW';
+			// 	}else if(deg<236.25){
+			// 		direction = 'SW';
+			// 	}else if(deg<258.75){
+			// 		direction = 'WSW';
+			// 	}else if(deg<281.25){
+			// 		direction = 'W';
+			// 	}else if(deg<303.75){
+			// 		direction = 'WNW';
+			// 	}else if(deg<326.25){
+			// 		direction = 'NW';
+			// 	}else if(deg<348.75){
+			// 		direction = 'NNW';
+			// 	}
+			// 	return direction;
+
+			// 	if(windCoord>=180){
+			// 		windCoordMod = windCoord - 180;
+			// 	}
+			// }
+
+
+			// $('#wind-arrow').addClass('rotate');
+			// $('#wind-arrow').css('transition', 'transform '+ 10/windSpeed +'s cubic-bezier(0.09,0.25,0.49,1.58)');
+			// if(windCoord<=180){
+			// 	var rotationAngle = -(180-windCoord);
+			// 	setTimeout(function(){$('.rotate').css('transform','rotate('+rotationAngle+'deg)')},0)
+			// }else{
+			// 	setTimeout(function(){$('.rotate').css('transform','rotate('+windCoordMod+'deg)')},0)
+			// }
+			
 	
 
 
@@ -192,6 +254,7 @@ $(document).ready(()=>{
 		function makeSun(){
 			var sunImage = new Image();
 			sunImage.src = 'images/sun.png';
+			// if(time >= '11:00:00') && (time <= )
 			context.drawImage(sunImage,15,375);
 
 		}	

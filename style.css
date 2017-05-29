@@ -43,3 +43,50 @@ body{
     /* line-height: 40px; */
     padding-top: 30px;
 }
+
+
+#wind-arrow{
+    transition: transform 2s cubic-bezier(0.09,0.25,0.49,1.58);
+    position:absolute;
+    top:200px;
+    left:50px;
+}
+
+#compass{
+    height:100px;
+    width:100px;
+margin-left:50px;
+
+}
+#N, #E, #S, #W{
+    position:absolute;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+#N{
+    top:165px;
+    left:80px;
+}
+#E{
+    top:210px;
+    left:130px;
+}
+#S{
+    top:250px;
+    left:81px;
+}
+#W{
+    top:210px;
+    left:30px;
+}
+
+
+
+
+
+
+
+
+
+
