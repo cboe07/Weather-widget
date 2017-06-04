@@ -91,7 +91,7 @@ $(document).ready(()=>{
 			
 
 
-			// function cardinalDirection(deg){
+			// function cardinalDirection(deg){     // Cardinal directions for wind
 			// 	var direction;
 			// 	if((deg<11.25)||(deg>348.75)){
 			// 		direction = 'N';
@@ -181,8 +181,8 @@ $(document).ready(()=>{
   //       context.textBaseline = "top";
   //       context.fillText(temps.curr,155, 105);
 
-  		if (currentTemp >= 90){
-			context.strokeStyle = 'rgba(242,39,23,0.6)';
+  		if (currentTemp >= 90){                                   // Color-coded temperature
+			context.strokeStyle = 'rgba(242,39,23,0.6)'; 
 		}else if (currentTemp >= 80){
 			context.strokeStyle = 'rgba(242,136,3,0.6)';
 		}else if (currentTemp >= 60){
@@ -197,7 +197,7 @@ $(document).ready(()=>{
 
 
 
-		if (currentTemp != undefined){                             //<<<<<<<===============puts temp in circle
+		if (currentTemp != undefined){                             // Puts temp in circle
 			context.stroke();
 			context.font = "30px Khula";
 			// context.fillStyle = 'rgba(252,186,04,0.6)';
@@ -251,7 +251,7 @@ $(document).ready(()=>{
 		// requestAnimationFrame(function(){
 		// 	animateSun(currentPercent/100,currentTemp);
 		// });	
-		function makeSun(){
+		function makeSun(){                                          // Animate sun along horizon
 			var sunImage = new Image();
 			sunImage.src = 'images/sun.png';
 			// if(time >= '11:00:00') && (time <= )
